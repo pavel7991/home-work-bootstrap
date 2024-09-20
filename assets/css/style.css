@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -7490,7 +7491,27 @@ textarea.form-control-lg{
 .z-3{
   z-index:3 !important;
 }
+.accordion-button:focus{
+  -webkit-box-shadow:none;
+          box-shadow:none;
+  border:1px solid #0d6efd;
+}
 
+.card-photo{
+  position:relative;
+  height:150px;
+  overflow:hidden;
+}
+.card-photo img{
+  position:absolute;
+  width:100%;
+  height:auto;
+  top:50%;
+  left:50%;
+  -webkit-transform:translateY(-50%) translateX(-50%);
+      -ms-transform:translateY(-50%) translateX(-50%);
+          transform:translateY(-50%) translateX(-50%);
+}
 @media (min-width: 576px){
   .container-sm, .container{
     max-width:540px;
@@ -8534,7 +8555,6 @@ textarea.form-control-lg{
     text-align:center !important;
   }
 }
-
 @media (min-width: 768px){
   .container-md, .container-sm, .container{
     max-width:720px;
@@ -9523,7 +9543,6 @@ textarea.form-control-lg{
     text-align:center !important;
   }
 }
-
 @media (min-width: 992px){
   .container-lg, .container-md, .container-sm, .container{
     max-width:960px;
@@ -10516,7 +10535,6 @@ textarea.form-control-lg{
     text-align:center !important;
   }
 }
-
 @media (min-width: 1200px){
   h1, .h1{
     font-size:2.5rem;
@@ -11553,7 +11571,6 @@ textarea.form-control-lg{
     font-size:1.5rem !important;
   }
 }
-
 @media (min-width: 1400px){
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container{
     max-width:1320px;
@@ -12542,7 +12559,6 @@ textarea.form-control-lg{
     text-align:center !important;
   }
 }
-
 @media (max-width: 1399.98px){
   .table-responsive-xxl{
     overflow-x:auto;
@@ -12634,14 +12650,12 @@ textarea.form-control-lg{
     visibility:visible;
   }
 }
-
 @media (max-width: 1399.98px) and (prefers-reduced-motion: reduce){
   .offcanvas-xxl{
     -webkit-transition:none;
     transition:none;
   }
 }
-
 @media (max-width: 1199.98px){
   .table-responsive-xl{
     overflow-x:auto;
@@ -12733,14 +12747,12 @@ textarea.form-control-lg{
     visibility:visible;
   }
 }
-
 @media (max-width: 1199.98px) and (prefers-reduced-motion: reduce){
   .offcanvas-xl{
     -webkit-transition:none;
     transition:none;
   }
 }
-
 @media (max-width: 991.98px){
   .table-responsive-lg{
     overflow-x:auto;
@@ -12832,14 +12844,12 @@ textarea.form-control-lg{
     visibility:visible;
   }
 }
-
 @media (max-width: 991.98px) and (prefers-reduced-motion: reduce){
   .offcanvas-lg{
     -webkit-transition:none;
     transition:none;
   }
 }
-
 @media (max-width: 767.98px){
   .table-responsive-md{
     overflow-x:auto;
@@ -12931,14 +12941,12 @@ textarea.form-control-lg{
     visibility:visible;
   }
 }
-
 @media (max-width: 767.98px) and (prefers-reduced-motion: reduce){
   .offcanvas-md{
     -webkit-transition:none;
     transition:none;
   }
 }
-
 @media (max-width: 575.98px){
   .table-responsive-sm{
     overflow-x:auto;
@@ -13030,20 +13038,17 @@ textarea.form-control-lg{
     visibility:visible;
   }
 }
-
 @media (max-width: 575.98px) and (prefers-reduced-motion: reduce){
   .offcanvas-sm{
     -webkit-transition:none;
     transition:none;
   }
 }
-
 @media (prefers-reduced-motion: no-preference){
   :root{
     scroll-behavior:smooth;
   }
 }
-
 @media (prefers-reduced-motion: reduce){
   .form-control{
     -webkit-transition:none;
@@ -13156,7 +13161,6 @@ textarea.form-control-lg{
     transition:none;
   }
 }
-
 @media print{
   .d-print-inline{
     display:inline !important;

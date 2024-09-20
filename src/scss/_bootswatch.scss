@@ -1,87 +1,145 @@
-// Darkly 5.3.3
+// Pulse 5.3.3
 // Bootswatch
 
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
-@if $web-font-path {
-  @import url("#{$web-font-path}");
+// Buttons
+
+.btn {
+  &:focus,
+  &:active,
+  &:active:focus,
+  &.active:focus {
+    outline: none;
+  }
+
+  &-secondary {
+    color: $gray-900;
+    background-color: $white;
+    border-color: #ccc;
+
+    &:hover {
+      color: $gray-900;
+      background-color: $gray-300;
+      border-color: $gray-500;
+    }
+
+    &.disabled {
+      color: tint-color($gray-900, 5%);
+      background-color: $white;
+      border-color: tint-color(#ccc, 5%);
+    }
+  }
+
+  &-warning {
+    color: $white;
+  }
+
+  &-primary:focus {
+    box-shadow: 0 0 5px tint-color($primary, 10%);
+  }
+
+  &-secondary:focus {
+    box-shadow: 0 0 5px $gray-400;
+  }
+
+  &-success:focus {
+    box-shadow: 0 0 5px tint-color($success, 10%);
+  }
+
+  &-info:focus {
+    box-shadow: 0 0 5px tint-color($info, 10%);
+  }
+
+  &-warning:focus {
+    box-shadow: 0 0 5px tint-color($warning, 10%);
+  }
+
+  &-danger:focus {
+    box-shadow: 0 0 5px tint-color($danger, 10%);
+  }
+
+  &.disabled:focus {
+    box-shadow: none;
+  }
 }
 
-// Typography
+// Tables
 
-.blockquote {
-  &-footer {
-    color: $gray-600;
-  }
+.table .thead-dark th {
+  background-color: $secondary;
+  border-color: $table-border-color;
 }
 
 // Forms
 
-@include color-mode(dark) {
-  .input-group-text {
-    // color: $white;
-  }
-}
-
-.form-floating {
-  > label,
-  > .form-control:focus ~ label,
-  > .form-control:not(:placeholder-shown) ~ label {
-    color: $input-placeholder-color;
-  }
+.form-control:focus {
+  box-shadow: 0 0 5px rgba(100, 65, 164, .4);
 }
 
 // Navs
 
-.nav-tabs,
-.nav-pills {
+.nav-tabs {
   .nav-link,
+  .nav-link.active, {
+    border-width: 0 0 1px;
+  }
+
+  .nav-link:hover,
   .nav-link.active,
-  .nav-link.active:focus,
   .nav-link.active:hover,
-  .nav-item.open .nav-link,
-  .nav-item.open .nav-link:focus,
-  .nav-item.open .nav-link:hover {
-    color: $white;
+  .nav-link.active:focus {
+    border-bottom: 1px solid $primary;
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 0;
   }
 }
 
-.breadcrumb a {
-  color: $white;
-}
-
-.pagination {
-  a:hover {
-    text-decoration: none;
+.breadcrumb {
+  &-item.active {
+    color: $gray-700;
   }
 }
 
 // Indicators
 
-.alert {
-  color: $white;
-  border: none;
-
-  a,
-  .alert-link {
-    color: $white;
-    text-decoration: underline;
-  }
-
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      @if $enable-gradients {
-        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
-      } @else {
-        background-color: $value;
-      }
-    }
+.badge {
+  &.bg-light {
+    color: $dark;
   }
 }
 
-.tooltip {
-  --bs-tooltip-bg: var(--bs-tertiary-bg);
-  --bs-tooltip-color: var(--bs-emphasis-color);
+// Progress bars
+
+.progress {
+  height: 8px;
+}
+
+// Containers
+
+.list-group {
+  &-item {
+    color: rgba(255, 255, 255, .8);
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &.active {
+      font-weight: 700;
+
+      &:hover {
+        background-color: $list-group-hover-bg;
+      }
+    }
+
+    &.disabled:hover {
+      color: $list-group-disabled-color;
+    }
+  }
 }

@@ -1,0 +1,21 @@
+.accordion-button {
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $primary;
+  }
+}
+
+.card-photo {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}

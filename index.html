@@ -8,46 +8,88 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-  <header class="p-3 text-bg-dark">
-    <div class="container-lg">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-        </a>
+  <header class="bg-primary-subtle">
+    <div class="shadow-lg z-1 position-relative">
+      <div class="container-lg">
+        <div class="d-flex flex-wrap justify-content-center align-items-center py-3">
+          <a href="index.html"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <i class="bi bi-buildings-fill fs-2 text-primary-emphasis"></i>
+            <span class="fs-4 ms-2 fw-bold text-primary-emphasis">My country</span>
+          </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
-            aria-label="Search">
-        </form>
-
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+              data-bs-target="#modal-login">Login</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-sing-up">Sing
+              up</button>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="bg-primary shadow">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active text-light fw-bold" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Posts
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Kyiv</a></li>
+                    <li><a class="dropdown-item" href="#">Kharkiv</a></li>
+                    <li><a class="dropdown-item" href="#">Odesa</a></li>
+                    <li><a class="dropdown-item" href="#">Dnipro</a></li>
+                    <li><a class="dropdown-item" href="#">Lviv</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">About</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
   </header>
 
-  <div class="container-lg my-4">
+  <div class="container-lg">
+
+    <div class="row p-4 my-5 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow bg-info-subtle">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">My country</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quam ullam ipsam veritatis!
+          Accusantium suscipit in corporis porro dolorem nobis ipsa, velit eveniet dolor distinctio!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">More</button>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
+        <img class="rounded-lg-3 w-100 h-auto" src="assets/images/hero-map.png" alt="ukraine-map">
+      </div>
+    </div>
+
     <div class="row">
-
       <!-- main -->
-      <main class="col-lg-7 p-3">
-        <h1 class="fs-1 text-center mb-4 fw-bold">Сities of Ukraine</h1>
+      <main class="col-lg-6 p-3">
+        <h2 class="fw-bold mb-4">Сities of Ukraine</h2>
 
-        <div class="accordion" id="city-list">
+        <div class="accordion shadow rounded-3" id="city-list">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button fs-4 fw-bold" type="button" data-bs-toggle="collapse"
@@ -172,73 +214,200 @@
 
 
       <!-- Left -->
-      <div class="col-lg-2 col-sm-6 p-3 order-lg-first">
-        <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="col-lg-3 col-sm-6 p-3 order-lg-first ">
+        <h2 class="fw-bold mb-4">Photos of cities</h2>
+
+        <div id="slider-city" class="carousel slide carousel-fade shadow rounded-3 overflow-hidden"
+          data-bs-ride="carousel">
+
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#slider-city" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#slider-city" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#slider-city" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#slider-city" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#slider-city" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
+
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="assets/images/ua.jpg" class="d-block w-100" alt="...">
+              <img src="assets/images/kyiv.jpg" class="d-block w-100" alt="Kyiv">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5 class="fs-3 fw-bold">Kyiv</h5>
               </div>
             </div>
+
             <div class="carousel-item">
-              <img src="assets/images/ua2.jpg" class="d-block w-100" alt="...">
+              <img src="assets/images/kharkiv.jpg" class="d-block w-100" alt="Kharkiv">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h5 class="fs-3 fw-bold">Kharkiv</h5>
               </div>
             </div>
+
             <div class="carousel-item">
-              <img src="assets/images/ua.jpg" class="d-block w-100" alt="...">
+              <img src="assets/images/odesa.jpg" class="d-block w-100" alt="Odesa">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5 class="fs-3 fw-bold">Odesa</h5>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/images/dnipro.jpg" class="d-block w-100" alt="Dnipro">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="fs-3 fw-bold">Dnipro</h5>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/images/lviv.jpg" class="d-block w-100" alt="Lviv">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="fs-3 fw-bold">Lviv</h5>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#slider-city" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+
+          <button class="carousel-control-next" type="button" data-bs-target="#slider-city" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
+
+        </div> <!-- slider-city END -->
       </div> <!-- Left - END-->
 
 
 
-      <div class="col-lg-3 col-sm-6 p-3">right</div>
+      <div class="col-lg-3 col-sm-6 p-3">
+        <h2 class="fw-bold mb-4">Posts</h2>
 
+        <div class="card text-center mb-3 shadow-sm">
+          <div class="card-photo">
+            <img src="assets/images/kyiv.jpg" class="card-img-top" alt="#">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Places in Kiev</h5>
+            <p class="card-text lh-sm">Lorem ipsum dolor sit amet consectetur</p>
+            <a href="#" class="btn btn-primary px-5 ">More</a>
+          </div>
+        </div>
 
+        <div class="card text-center shadow-sm">
+          <div class="card-photo">
+            <img src="assets/images/kharkiv.jpg" class="card-img-top" alt="#">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Places in Kharkiv</h5>
+            <p class="card-text fs-6 lh-sm">Lorem ipsum dolor sit amet consectetur</p>
+            <a href="#" class="btn btn-primary px-5">More</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+  <footer class="py-3 mt-5 bg-primary-subtle">
+    <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Posts</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
     </ul>
-    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+    <p class="text-center text-body-secondary">© 2024 My country, Inc</p>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="modal-sing-up" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-sing-upLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title fs-5" id="modal-sing-upLabel">Sign up</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
 
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="sing-up-name" class="form-label">Name:</label>
+              <input type="text" class="form-control" id="sing-up-name" placeholder="John">
+            </div>
+
+            <div class="col-md-6">
+              <label for="sing-up-surname" class="form-label">Surname:</label>
+              <input type="text" class="form-control" id="sing-up-surname" placeholder="Doe">
+            </div>
+
+            <div class="col-md-6">
+              <label for="sing-up-email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="sing-up-email" placeholder="example@mail.com">
+            </div>
+
+            <div class="col-md-6">
+              <label for="sing-up-password" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="sing-up-password">
+            </div>
+
+            <div class="col-md-6">
+              <label for="sing-up-country" class="form-label">Country:</label>
+              <input type="text" class="form-control" id="sing-up-country" placeholder="Ukraine">
+            </div>
+
+            <div class="col-md-6">
+              <label for="sing-up-city" class="form-label">City:</label>
+              <input type="text" class="form-control" id="sing-up-city" placeholder="Kyiv">
+            </div>
+
+            <div class="col-12">
+              <label for="sing-up-sex" class="form-label">State:</label>
+              <select id="sing-up-sex" class="form-select">
+                <option selected>Choose..</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+
+            <div class="col-12  d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary px-5 py-2">Sign in</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- modal-sing-up END-->
+
+  <div class="modal fade" id="modal-login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title fs-5" id="modal-sing-upLabel">Login</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form class="row g-3">
+            <div>
+              <label for="login-email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="login-email" placeholder="example@mail.com">
+            </div>
+            <div>
+              <label for="login-password" class="form-label">Password:</label>
+              <input type="password" class="form-control" id="login-password">
+            </div>
+            <div class="col-12  d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary px-5 py-2">Login</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- Modal END-->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
