@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="p-3 text-bg-dark">
+    <div class="container-lg">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+            aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-lg my-4">
+    <div class="row">
+
+      <!-- main -->
+      <main class="col-lg-7 p-3">
+        <h1 class="fs-1 text-center mb-4 fw-bold">Сities of Ukraine</h1>
+
+        <div class="accordion" id="city-list">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fs-4 fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#city-list-kyiv" aria-expanded="true" aria-controls="city-list-kyiv">
+                Kyiv
+              </button>
+            </h2>
+            <div id="city-list-kyiv" class="accordion-collapse collapse show" data-bs-parent="#city-list">
+              <div class="accordion-body">
+                <p class="fs-6 mb-2">Kyiv (also Kiev) is the capital and most populous city of Ukraine. It is in
+                  north-central Ukraine along the Dnieper River. As of 1 January 2022, its population was 2,952,301,
+                  making Kyiv the seventh-most populous city in Europe.</p>
+                <p class="fs-6">Kyiv is an important industrial, scientific, educational, and cultural center in Eastern
+                  Europe. It is home to many high-tech industries, higher education institutions, and historical
+                  landmarks. The city has an extensive system of public transport and infrastructure, including the Kyiv
+                  Metro.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#city-list-kharkiv" aria-expanded="false" aria-controls="city-list-kharkiv">
+                Kharkiv
+              </button>
+            </h2>
+            <div id="city-list-kharkiv" class="accordion-collapse collapse" data-bs-parent="#city-list">
+              <div class="accordion-body">
+                <p class="fs-6 mb-3">Kharkiv is the second-largest city in Ukraine. Located in the northeast of the
+                  country, it is the largest city of the historic region of Sloboda Ukraine. Kharkiv is the
+                  administrative centre of Kharkiv Oblast and Kharkiv Raion.</p>
+                <p class="fs-6">Kharkiv was founded in 1654 as a fortress, and grew to become a major centre of
+                  industry, trade, and
+                  Ukrainian culture in Sloboda Ukraine in the multiethnic Russian Empire. At the beginning of the 20th
+                  century the city had a predominantly Ukrainian and Russian population, but as industrial expansion
+                  drew
+                  in further labor from the distressed countryside, and as the Soviet Union moderated previous
+                  restrictions on Ukrainian cultural expression, Ukrainians became the largest ethnic group in the city
+                  by
+                  the eve of World War II. From December 1919 to January 1934, Kharkiv was the capital of the Ukrainian
+                  Soviet Socialist Republic.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#city-list-odesa" aria-expanded="false" aria-controls="city-list-odesa">
+                Odesa
+              </button>
+            </h2>
+            <div id="city-list-odesa" class="accordion-collapse collapse" data-bs-parent="#city-list">
+              <div class="accordion-body">
+                <p class="fs-6 mb-3">Odesa (also spelled Odessa) is the third most populous city and municipality in
+                  Ukraine and a major seaport and transport hub located in the south-west of the country, on the
+                  northwestern shore of the Black Sea. The city is also the administrative centre of the Odesa Raion and
+                  Odesa Oblast, as well as a multiethnic cultural centre. </p>
+                <p class="fs-6">Odesa is a warm-water port. The city of Odesa hosts both the Port of Odesa and Port
+                  Pivdennyi, a significant oil terminal situated in the city's suburbs. Another notable port,
+                  Chornomorsk, is located in the same oblast, to the south-west of Odesa. Together they represent a
+                  major transport hub integrating with railways. Odesa's oil and chemical processing facilities are
+                  connected to the Russian and other European networks by strategic pipelines. In 2000, the Quarantine
+                  Pier at Odesa Commercial Sea Port was declared a free port and free economic zone for a period of 25
+                  years.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#city-list-dnipro" aria-expanded="false" aria-controls="city-list-dnipro">
+                Dnipro
+              </button>
+            </h2>
+            <div id="city-list-dnipro" class="accordion-collapse collapse" data-bs-parent="#city-list">
+              <div class="accordion-body">
+                <p class="fs-6 mb-3">Dnipro is Ukraine's fourth-largest city, with about one million inhabitants. It is
+                  located in the eastern part of Ukraine, 391 km (243 mi) southeast of the Ukrainian capital Kyiv on the
+                  Dnipro River, after which its name is derived. Dnipro is the administrative centre of Dnipropetrovsk
+                  Oblast.</p>
+                <p class="fs-6">Renamed Dnipropetrovsk in 1926 after the Ukrainian Communist Party leader Grigory
+                  Petrovsky, it became a focus for the Stalinist commitment to the rapid development of heavy industry.
+                  After World War II, this included nuclear, arms, and space industries whose strategic importance led
+                  to Dnipropetrovsk's designation as a closed city.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#city-list-lviv" aria-expanded="false" aria-controls="city-list-lviv">
+                Lviv
+              </button>
+            </h2>
+            <div id="city-list-lviv" class="accordion-collapse collapse" data-bs-parent="#city-list">
+              <div class="accordion-body">
+                <p class="fs-6 mb-3">Lviv is the largest city in western Ukraine, as well as the sixth-largest city in
+                  Ukraine, with a population of 717,500 (2022 estimate).It serves as the administrative centre of Lviv
+                  Oblast and Lviv Raion, and is one of the main cultural centres of Ukraine. Lviv also hosts the
+                  administration of Lviv urban hromada. It was named after Leo I of Galicia, the eldest son of Daniel,
+                  King of Ruthenia.</p>
+                <p class="fs-6">Lviv emerged as the centre of the historical regions of Red Ruthenia and Galicia in the
+                  14th century, superseding Halych, Chełm, Belz, and Przemyśl. It was the capital of the Kingdom of
+                  Galicia–Volhynia from 1272 to 1349, when it was conquered by King Casimir III the Great of Poland.
+                  From 1434, it was the regional capital of the Ruthenian Voivodeship in the Kingdom of Poland. In 1772,
+                  after the First Partition of Poland, the city became the capital of the Habsburg Kingdom of Galicia
+                  and Lodomeria. In 1918, for a short time, it was the capital of the West Ukrainian People's Republic.
+                  Between the wars, the city was the centre of the Lwów Voivodeship in the Second Polish Republic. After
+                  the German-Soviet invasion of Poland in 1939, Lviv was annexed by the Soviet Union.</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- accordion END -->
+
+      </main><!-- main END -->
+
+
+
+      <!-- Left -->
+      <div class="col-lg-2 col-sm-6 p-3 order-lg-first">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/images/ua.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/ua2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/images/ua.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div> <!-- Left - END-->
+
+
+
+      <div class="col-lg-3 col-sm-6 p-3">right</div>
+
+
+    </div>
+  </div>
+
+
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
