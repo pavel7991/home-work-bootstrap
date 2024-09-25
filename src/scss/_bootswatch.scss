@@ -1,106 +1,19 @@
-// Pulse 5.3.3
+// Flatly 5.3.3
 // Bootswatch
 
 
 // Variables
 
-// Buttons
-
-.btn {
-  &:focus,
-  &:active,
-  &:active:focus,
-  &.active:focus {
-    outline: none;
-  }
-
-  &-secondary {
-    color: $gray-900;
-    background-color: $white;
-    border-color: #ccc;
-
-    &:hover {
-      color: $gray-900;
-      background-color: $gray-300;
-      border-color: $gray-500;
-    }
-
-    &.disabled {
-      color: tint-color($gray-900, 5%);
-      background-color: $white;
-      border-color: tint-color(#ccc, 5%);
-    }
-  }
-
-  &-warning {
-    color: $white;
-  }
-
-  &-primary:focus {
-    box-shadow: 0 0 5px tint-color($primary, 10%);
-  }
-
-  &-secondary:focus {
-    box-shadow: 0 0 5px $gray-400;
-  }
-
-  &-success:focus {
-    box-shadow: 0 0 5px tint-color($success, 10%);
-  }
-
-  &-info:focus {
-    box-shadow: 0 0 5px tint-color($info, 10%);
-  }
-
-  &-warning:focus {
-    box-shadow: 0 0 5px tint-color($warning, 10%);
-  }
-
-  &-danger:focus {
-    box-shadow: 0 0 5px tint-color($danger, 10%);
-  }
-
-  &.disabled:focus {
-    box-shadow: none;
-  }
-}
-
-// Tables
-
-.table .thead-dark th {
-  background-color: $secondary;
-  border-color: $table-border-color;
-}
-
-// Forms
-
-.form-control:focus {
-  box-shadow: 0 0 5px rgba(100, 65, 164, .4);
+$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
+@if $web-font-path {
+  @import url("#{$web-font-path}");
 }
 
 // Navs
 
-.nav-tabs {
-  .nav-link,
-  .nav-link.active, {
-    border-width: 0 0 1px;
-  }
-
-  .nav-link:hover,
-  .nav-link.active,
-  .nav-link.active:hover,
-  .nav-link.active:focus {
-    border-bottom: 1px solid $primary;
-  }
-
-  .nav-item + .nav-item {
-    margin-left: 0;
-  }
-}
-
-.breadcrumb {
-  &-item.active {
-    color: $gray-700;
+.pagination {
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -112,34 +25,41 @@
   }
 }
 
-// Progress bars
+.alert {
+  color: $white;
+  border: none;
 
-.progress {
-  height: 8px;
+  a,
+  .alert-link {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($body-bg, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
+    }
+  }
+
+  &-light {
+    &,
+    a,
+    .alert-link {
+      color: $body-color;
+    }
+  }
 }
 
 // Containers
 
-.list-group {
-  &-item {
-    color: rgba(255, 255, 255, .8);
-
-    &.active,
-    &:hover,
-    &:focus {
-      color: $white;
-    }
-
-    &.active {
-      font-weight: 700;
-
-      &:hover {
-        background-color: $list-group-hover-bg;
-      }
-    }
-
-    &.disabled:hover {
-      color: $list-group-disabled-color;
-    }
+.modal,
+.toast,
+.offcanvas {
+  .btn-close {
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
   }
 }
